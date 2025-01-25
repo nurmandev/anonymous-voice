@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", { "semi": true }],
+    "semi": ["error", "always"],
+    "@typescript-eslint/no-empty-object-type": "off" // Disable this specific rule
+  }
+}

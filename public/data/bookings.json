@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "user": {
+      "id": "u1",
+      "name": "Daniel Hugh",
+      "avatarUrl": "/placeholder.svg",
+      "username": "danielh",
+      "isAnonymous": false,
+      "lastActiveAt": "2023-10-01T12:00:00Z",
+      "status": "online",
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "soundEnabled": true,
+        "messagePreview": true
+      },
+      "role": "user",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "updatedAt": "2023-10-01T12:00:00Z"
+    },
+    "schedule": "1:00 pm",
+    "duration": "10 min",
+    "status": "pending"
+  },
+  {
+    "id": "2",
+    "user": {
+      "id": "u2",
+      "name": "Jane Doe",
+      "avatarUrl": "/placeholder.svg",
+      "username": "janed",
+      "isAnonymous": false,
+      "lastActiveAt": "2023-10-01T12:00:00Z",
+      "status": "online",
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "soundEnabled": true,
+        "messagePreview": true
+      },
+      "role": "admin",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "updatedAt": "2023-10-01T12:00:00Z"
+    },
+    "schedule": "2:00 pm",
+    "duration": "15 min",
+    "status": "running"
+  },
+  {
+    "id": "3",
+    "user": {
+      "id": "u3",
+      "name": "John Smith",
+      "avatarUrl": "/placeholder.svg",
+      "username": "johns",
+      "isAnonymous": false,
+      "lastActiveAt": "2023-10-01T12:00:00Z",
+      "status": "offline",
+      "settings": {
+        "theme": "light",
+        "notifications": false,
+        "soundEnabled": false,
+        "messagePreview": false
+      },
+      "role": "user",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "updatedAt": "2023-10-01T12:00:00Z"
+    },
+    "schedule": "3:00 pm",
+    "duration": "20 min",
+    "status": "completed"
+  },
+  {
+    "id": "4",
+    "user": {
+      "id": "u4",
+      "name": "Emily Clark",
+      "avatarUrl": "/placeholder.svg",
+      "username": "emilyc",
+      "isAnonymous": false,
+      "lastActiveAt": "2023-10-01T12:00:00Z",
+      "status": "online",
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "soundEnabled": true,
+        "messagePreview": true
+      },
+      "role": "user",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "updatedAt": "2023-10-01T12:00:00Z"
+    },
+    "schedule": "4:00 pm",
+    "duration": "30 min",
+    "status": "cancelled"
+  },
+  {
+    "id": "5",
+    "user": {
+      "id": "u5",
+      "name": "Michael Brown",
+      "avatarUrl": "/placeholder.svg",
+      "username": "michaelb",
+      "isAnonymous": false,
+      "lastActiveAt": "2023-10-01T12:00:00Z",
+      "status": "online",
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "soundEnabled": true,
+        "messagePreview": true
+      },
+      "role": "user",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "updatedAt": "2023-10-01T12:00:00Z"
+    },
+    "schedule": "5:00 pm",
+    "duration": "45 min",
+    "status": "pending"
+  }
+]

@@ -1,0 +1,365 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AV-Server",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Auth"
+    },
+    {
+      "name": "Mentor"
+    },
+    {
+      "name": "Mentee"
+    },
+    {
+      "name": "Appointment"
+    },
+    {
+      "name": "Messaging"
+    }
+  ],
+  "paths": {
+    "/api/v1/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "userName": "mentor_16",
+                  "password": "your_new_password_he33re"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/users/create-mentor": {
+      "post": {
+        "tags": [
+          "Mentor"
+        ],
+        "summary": "Create Mentor",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "password": "your_new_password_he33re",
+                  "userName": "mentor_16",
+                  "mentor": {
+                    "gender": "female",
+                    "name": "Dr. Jane Smith",
+                    "bio": "Highly skilled neurologist with 15 years of experience.",
+                    "designation": "Lead Specialist",
+                    "specialization": "Neurology",
+                    "availability": "Tuesday to Saturday, 10 AM - 6 PM",
+                    "adminApproval": false,
+                    "email": "janesmith@example.com",
+                    "profileImage": "https://example.com/profileImages/janesmith.jpg"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/mentors": {
+      "get": {
+        "tags": [
+          "Mentor"
+        ],
+        "summary": "Get All Mentor",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/mentors/mentor_15": {
+      "get": {
+        "tags": [
+          "Mentor"
+        ],
+        "summary": "Get Single Mentor",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Mentor"
+        ],
+        "summary": "Update Mentor Approval",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "adminApproval": false
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/mentors/schedule": {
+      "patch": {
+        "tags": [
+          "Mentor"
+        ],
+        "summary": "Update Mentor Schedule",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "userName": "mentor_15",
+                  "schedule": [
+                    {
+                      "time": "6:00 PM - 2:00PM ",
+                      "isAvailable": false
+                    },
+                    {
+                      "time": "5:00 PM",
+                      "isAvailable": false
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/users/create-mentee": {
+      "post": {
+        "tags": [
+          "Mentee"
+        ],
+        "summary": "Create Mantee",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "password": "your_new_password_he33re",
+                  "userName": "mentor_new_user_96",
+                  "mentee": {
+                    "gender": "female",
+                    "age": 20
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/appointments/create-appointment": {
+      "post": {
+        "tags": [
+          "Appointment"
+        ],
+        "summary": "Create Appoinment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "appointmentType": "call",
+                  "status": "confirmed",
+                  "appointmentDate": "2024-12-05T00:00:00Z",
+                  "content": "String",
+                  "selectedSlot": {
+                    "time": "12.00PM-1.00PM",
+                    "isAvailable": true
+                  },
+                  "mentorUserName": "user-3",
+                  "menteeUserName": "String"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/appointments": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "summary": "Get Appointmens",
+        "parameters": [
+          {
+            "name": "mentorUserName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "user-3"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/message/create-message": {
+      "post": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Send message",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "sentBy": "fazlay",
+                  "sentTo": "fazlay",
+                  "message": "Need to sleep",
+                  "isSeen": false
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/message": {
+      "get": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Get Messages by UserName",
+        "parameters": [
+          {
+            "name": "sentBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "fazlay"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/message/67606e75d462d997c217fed6": {
+      "get": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Get Single Message",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
